@@ -1,0 +1,250 @@
+@charset "UTF-8";
+
+#main_home {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 1260px;
+    padding: 0 30px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.img_tit {
+    width: 200px;
+    height: 200px; 
+    background: #3a58a4;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.img_tit img {margin-top: 20px;}
+
+.main_txt {width: 40%;}
+
+.txt_title {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 50px;
+    margin-left: 50px;
+}
+
+.txt_title:after {
+    content: '';
+    border-right: 2px solid #808080;
+}
+
+#main_skills .inner {
+    max-width: 1260px;
+    padding: 70px 30px 10px 30px;
+    margin: 0 auto;
+}
+
+#main_skills .skills>li {
+    background: #fff;
+    border-radius: 40px;
+    margin-bottom: 30px;
+    height: 110px;
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#main_skills .skills>li>strong {font-size: 2.5rem; color: #ff8c81; font-weight: 500;}
+
+#main_skills .skills li p {width: 700px;} 
+
+#main_portfolio .inner {
+    max-width: 1260px;
+    padding: 115px 30px;
+    margin: 0 auto;
+}
+
+#main_portfolio .portfolio {display: flex; justify-content: space-between;}
+
+#main_portfolio .portfolio li {
+    width: calc(100% / 3);
+    height: 360px;
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+#main_portfolio .portfolio li + li {margin-left: 50px;}
+
+#main_portfolio .portfolio li .img_wrap {position: absolute;}
+
+@media (hover: hover) {
+    #main_portfolio .portfolio li:hover .txt_wrap {
+        content: '';
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width:100%;
+        height: 100%;
+        background: #000;
+        opacity: 0.7;
+        transition: all 0.2s;
+    }
+    #main_portfolio .portfolio li:hover p {color: #fff;}
+}
+
+
+#main_about .inner {
+    max-width: 1260px;
+    padding: 220px 30px;
+    margin: 0 auto;
+}
+
+#main_about dl {
+    display: flex;
+    flex-direction: row;
+	flex-wrap: wrap;
+    width: 400px;
+    margin: 0 auto;
+}
+
+#main_about dl dt {
+    width: 15%;
+    padding: 10px 0;
+    font-weight: 700;
+}
+#main_about dl dd {
+    width: 85%;
+    padding: 10px 0;
+}
+
+#main_contact .inner {
+    max-width: 1260px;
+    padding: 200px 30px;
+    margin: 0 auto;
+}
+
+#main_contact dl {
+    display: flex;
+    flex-direction: row;
+	flex-wrap: wrap;
+    width: 350px;
+    margin: 0 auto;
+}
+
+#main_contact dl dt {
+    width: 25%;
+    padding: 10px 0;
+    font-weight: 700;
+}
+#main_contact dl dd {
+    width: 75%;
+    padding: 10px 0;
+}
+
+
+
+
+/* 타블렛 분기점 1200 */
+/* pc그리드가 1280이므로 1280이하에서부터 변경사항이 많을경우 */
+@media (max-width:1280px) {
+    #main_home {flex-direction: column;}
+    
+    .img_tit {
+        width: 180px;
+        height: 180px; 
+        margin-top: 100px;
+    }
+    
+    .main_txt {width: 50%; height: 50%; text-align: center;}
+
+    .txt_title {
+        font-size: 2.5rem; 
+        line-height: 40px;
+        margin: 30px 0;
+    }
+
+    #main_skills .skills>li {height: 100px;}
+
+    #main_skills .skills>li>strong {width: 350px; font-size: 2.2rem;} 
+
+    #main_skills .skills li p {font-size: 1.8rem;}
+
+    #main_portfolio .portfolio li {height: 330px;}
+
+    #main_portfolio .portfolio li:hover .txt_wrap p {font-size: 1.7rem;}
+}
+
+
+
+
+
+/* 모바일 분기점 767 */
+@media (max-width:767px) {
+    .main_txt {width: 48%;}
+
+    .txt_title {font-size: 2rem; line-height: 30px;}
+
+    #main_skills .skills>li {
+        padding: 0 20px; 
+        height: 140px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+    }
+    
+    #main_skills .skills>li>strong {
+        font-size: 1.5rem;
+        font-weight: 700; 
+        width: 100%; 
+        margin-bottom: 15px;
+        text-align: center;
+        border-bottom: 1px solid #ff8c81;
+        line-height: 50px;
+    }
+
+    #main_skills .skills li br {display: none;}
+
+    #main_skills .skills li p {font-size: 1.5rem; width: 100%;}
+
+    #main_portfolio .inner {padding: 80px 30px}
+
+    #main_portfolio .portfolio {
+        display: flex; 
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    #main_portfolio .portfolio li {
+        width: 250px;
+        height: 300px;
+        border-radius: 20px;
+    }
+
+    #main_portfolio .portfolio li + li {margin: 30px 0;}
+
+    #main_about .inner {padding: 60px 0;}
+
+    #main_about dl {
+        padding: 0 80px;
+        font-size: 1.8rem;
+    }
+    
+    #main_about dl dd {padding-left: 10px;}
+
+    #main_about dl span {display: block;}
+    
+    #main_contact .inner {padding: 200px 0;} 
+
+    #main_contact dl {
+        font-size: 1.8rem;
+        padding: 0 50px;
+    }
+
+    #main_contact dl dd {
+        padding-left: 10px;
+    }
+
+}
